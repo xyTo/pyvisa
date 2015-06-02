@@ -116,6 +116,11 @@ A few alias has been created to ease the transition:
  - ask_delay -> query_delay
  - get_instrument -> open_resource
 
+However, there is now alias available for ask_for_values.
+Please see further down at “Ask vs. query” why:
+“ https://pyvisa.readthedocs.org/en/master/migrating.html#ask-vs-query
+
+and inside the topic “Reading and Writing values” at: https://pyvisa.readthedocs.org/en/master/rvalues.html#reading-and-writing-values for all the details on this topic.
 
 A more detailed description
 ---------------------------
@@ -251,6 +256,11 @@ However, `ask_for_values` has not been aliased to `query_values` because the API
 is different. `ask_for_values` still uses the old formatting API which is limited
 and broken. We suggest that you migrate everything to `query_values`
 
+This short-list could be used for quick code conversion:
+ - ask_for_values -> query_ascii_values
+ - ask_for_values -> query_binary_values
+
+Further details can be found inside the topic “Reading and Writing values” at: https://pyvisa.readthedocs.org/en/master/rvalues.html#reading-and-writing-values
 
 Seconds to milliseconds
 ~~~~~~~~~~~~~~~~~~~~~~~
